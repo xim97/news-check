@@ -1,8 +1,9 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs');
+require('dotenv').config();
 
-const TELEGRAM_BOT_TOKEN = 'test';
+const TELEGRAM_BOT_TOKEN = process.env.BOT_TOKEN;
 const TELEGRAM_CHAT_ID = '377542695';
 const NEWS_URL = 'https://it.tlscontact.com/by/msq/page.php?pid=news&l=ru';
 const DB_FILE = 'last_news.txt';
